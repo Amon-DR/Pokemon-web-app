@@ -1,0 +1,617 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  background-color: rgb(0, 0, 0);
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  z-index: -1;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+/* header */
+header {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
+  /* background-image: linear-gradient(rgb(255, 51, 51,03), rgb(167, 167, 92)); */
+  /* background-image: linear-gradient(rgba(241, 12, 12, 0.4), rgb(167, 167, 92)); */
+  background-image: linear-gradient(rgb(107, 3, 3), rgb(140, 140, 77));
+  height: 10vh;
+  align-items: center;
+  padding: 0 1em;
+}
+header img {
+  width: 20vh;
+}
+header img:hover {
+  width: 22vh;
+}
+
+header ul {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+}
+
+header ul a {
+  text-decoration: none;
+  list-style: none;
+  font-size: 4.5vh;
+  padding: 0.4em;
+  color: black;
+  font-weight: 800;
+  font-style: oblique;
+  color: rgb(19, 4, 4);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+header ul a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 100%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+/* header end */
+/* section */
+#title {
+  color: white;
+  text-align: center;
+  padding-top: 2em;
+
+  font-size: 3.5vh;
+}
+/* section end */
+/* section gallary */
+.pokemon-gallary img {
+  width: 12em;
+  height: 15em;
+}
+.api-pokemon {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+  right: 0;
+  bottom: 1em;
+  z-index: 20;
+  opacity: 0;
+  animation-play-state: paused;
+}
+.pokemon-gallary {
+  position: absolute;
+  height: 25em;
+  width: 62.9em;
+  margin: auto;
+  overflow: hidden;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 3em;
+  z-index: 1;
+}
+
+/* the pain  */
+#api-poke-1 {
+  color: rgb(255, 255, 255);
+  animation-name: rotate10;
+  animation-duration: 21s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+#api-poke-2 {
+  color: rgb(255, 255, 255);
+  animation-name: rotate20;
+  animation-duration: 21s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+#api-poke-4 {
+  color: rgb(255, 255, 255);
+  animation-name: rotate30;
+  animation-duration: 21s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+#api-poke-3 {
+  color: rgb(255, 255, 255);
+  animation-name: rotate40;
+  animation-duration: 21s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+
+#api-poke-5 {
+  color: rgb(255, 255, 255);
+  animation-name: rotate50;
+  animation-duration: 21s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+#api-poke-6 {
+  color: rgb(255, 255, 255);
+  animation-name: rotate60;
+  animation-duration: 21s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+#api-poke-7 {
+  color: rgb(255, 255, 255);
+  animation-name: rotate70;
+  animation-duration: 21s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+.pause {
+  animation-play-state: running;
+}
+
+/* reference Code */
+/* ///////////////////////// */
+
+/* ///////////////////////// */
+/* animated the rotation */
+/* 1 */
+@keyframes rotate10 {
+  0% {
+    z-index: 1;
+    opacity: 0;
+    bottom: -6em;
+    right: 10.2em;
+  }
+  14.28% {
+    z-index: 11;
+    opacity: 1;
+    bottom: 0em;
+    right: 0;
+  }
+  28.56% {
+    z-index: 40;
+    opacity: 1;
+    bottom: 5em;
+    right: 12.8em;
+  }
+  42.84% {
+    z-index: 5;
+    opacity: 1;
+    bottom: 8em;
+    right: 25.5em;
+  }
+  57.12% {
+    z-index: 6;
+    opacity: 1;
+    bottom: 5em;
+    right: 38.24em;
+  }
+  71.4% {
+    z-index: 5;
+    opacity: 1;
+    bottom: 0em;
+    right: 50.9em;
+  }
+  85.68% {
+    z-index: 4;
+    bottom: -6em;
+    right: 41.2em;
+    opacity: 0;
+  }
+
+  100% {
+    z-index: 3;
+    opacity: 0;
+    bottom: -6em;
+    right: 10.2em;
+  }
+}
+/* 2 */
+
+@keyframes rotate20 {
+  0% {
+    opacity: 1;
+    bottom: 0em;
+    right: 0;
+  }
+  14.28% {
+    z-index: 40;
+    opacity: 1;
+    bottom: 5em;
+    right: 12.8em;
+  }
+  28.56% {
+    z-index: 5;
+    opacity: 1;
+    bottom: 8em;
+    right: 25.5em;
+  }
+  42.84% {
+    z-index: 6;
+    opacity: 1;
+    bottom: 5em;
+    right: 38.24em;
+  }
+  57.12% {
+    z-index: 5;
+    opacity: 1;
+    bottom: 0em;
+    right: 50.9em;
+  }
+  71.4% {
+    z-index: 4;
+    bottom: -6em;
+    right: 41.2em;
+    opacity: 0;
+  }
+
+  85.68% {
+    z-index: 3;
+    opacity: 0;
+    bottom: -6em;
+    right: 10.2em;
+  }
+
+  100% {
+    opacity: 1;
+    bottom: 0em;
+    right: 0;
+    z-index: 7;
+  }
+}
+/* 3 */
+@keyframes rotate30 {
+  0% {
+    z-index: 7;
+    opacity: 1;
+    bottom: 5em;
+    right: 12.8em;
+  }
+  14.28% {
+    z-index: 7;
+    opacity: 1;
+    bottom: 8em;
+    right: 25.5em;
+  }
+  28.56% {
+    opacity: 1;
+    bottom: 5em;
+    right: 38.24em;
+  }
+  42.84% {
+    opacity: 1;
+    bottom: 0em;
+    right: 50.9em;
+  }
+  57.12% {
+    z-index: 4;
+    bottom: -6em;
+    right: 41.2em;
+    opacity: 0;
+  }
+
+  71.4% {
+    z-index: 7;
+    opacity: 0;
+    bottom: -6em;
+    right: 10.2em;
+  }
+
+  85.68% {
+    opacity: 1;
+    bottom: 0em;
+    right: 0;
+
+    z-index: 7;
+  }
+  100% {
+    z-index: 7;
+    opacity: 1;
+    bottom: 5em;
+    right: 12.8em;
+  }
+}
+/* 4 */
+@keyframes rotate40 {
+  0% {
+    z-index: 5;
+    opacity: 1;
+    bottom: 8em;
+    right: 25.5em;
+  }
+  14.28% {
+    z-index: 8;
+    opacity: 1;
+    bottom: 5em;
+    right: 38.24em;
+  }
+  28.56% {
+    z-index: 5;
+    opacity: 1;
+    bottom: 0em;
+    right: 50.9em;
+  }
+  42.84% {
+    z-index: 4;
+    bottom: -6em;
+    right: 41.2em;
+    opacity: 0;
+  }
+
+  57.12% {
+    z-index: 8;
+    opacity: 0;
+    bottom: -6em;
+    right: 10.2em;
+  }
+
+  71.4% {
+    z-index: 8;
+    opacity: 1;
+    bottom: 0em;
+    right: 0;
+  }
+  85.68% {
+    z-index: 8;
+    opacity: 1;
+    bottom: 5em;
+    right: 12.8em;
+  }
+  100% {
+    z-index: 5;
+    opacity: 1;
+    bottom: 8em;
+    right: 25.5em;
+  }
+}
+
+/* 5 */
+@keyframes rotate50 {
+  0% {
+    z-index: 6;
+    opacity: 1;
+    bottom: 5em;
+    right: 38.24em;
+  }
+  14.28% {
+    z-index: 5;
+    opacity: 1;
+    bottom: 0em;
+    right: 50.9em;
+  }
+  28.56% {
+    z-index: 4;
+    bottom: -6em;
+    right: 41.2em;
+    opacity: 0;
+  }
+
+  42.84% {
+    z-index: 8;
+    opacity: 0;
+    bottom: -6em;
+    right: 10.2em;
+  }
+
+  57.12% {
+    z-index: 9;
+    opacity: 1;
+    bottom: 0em;
+    right: 0;
+  }
+  71.4% {
+    z-index: 9;
+    opacity: 1;
+    bottom: 5em;
+    right: 12.8em;
+  }
+  85.68% {
+    z-index: 5;
+    opacity: 1;
+    bottom: 8em;
+    right: 25.5em;
+  }
+  100% {
+    z-index: 6;
+    opacity: 1;
+    bottom: 5em;
+    right: 38.24em;
+  }
+}
+/* 6 */
+@keyframes rotate60 {
+  0% {
+    z-index: 5;
+    opacity: 1;
+    bottom: 0em;
+    right: 50.9em;
+  }
+  14.28% {
+    z-index: 4;
+    bottom: -6em;
+    right: 41.2em;
+    opacity: 0;
+  }
+
+  28.56% {
+    z-index: 8;
+    opacity: 0;
+    bottom: -6em;
+    right: 10.2em;
+  }
+  42.84% {
+    z-index: 10;
+    opacity: 1;
+    bottom: 0em;
+    right: 0;
+  }
+
+  57.12% {
+    z-index: 10;
+    opacity: 1;
+    bottom: 5em;
+    right: 12.8em;
+  }
+  71.4% {
+    z-index: 5;
+    opacity: 1;
+    bottom: 8em;
+    right: 25.5em;
+  }
+  85.68% {
+    z-index: 6;
+    opacity: 1;
+    bottom: 5em;
+    right: 38.24em;
+  }
+  100% {
+    z-index: 5;
+    opacity: 1;
+    bottom: 0em;
+    right: 50.9em;
+  }
+}
+/* 7 */
+@keyframes rotate70 {
+  0% {
+    z-index: 4;
+    bottom: -6em;
+    right: 41.2em;
+    opacity: 0;
+  }
+  14.28% {
+    z-index: 8;
+    opacity: 0;
+    bottom: -6em;
+    opacity: 0;
+    right: 10.2em;
+  }
+
+  28.56% {
+    z-index: 11;
+    opacity: 1;
+    bottom: 0em;
+    right: 0;
+  }
+  42.84% {
+    z-index: 11;
+    opacity: 1;
+    bottom: 5em;
+    right: 12.8em;
+  }
+
+  57.12% {
+    z-index: 5;
+    opacity: 1;
+    bottom: 8em;
+    right: 25.5em;
+  }
+  71.4% {
+    z-index: 6;
+    opacity: 1;
+    bottom: 5em;
+    right: 38.24em;
+  }
+  85.68% {
+    z-index: 5;
+    opacity: 1;
+    bottom: 0em;
+    right: 50.9em;
+  }
+  100% {
+    z-index: 4;
+    bottom: -6em;
+    right: 41.2em;
+    opacity: 0;
+  }
+}
+/* animated the rotation end */
+
+/* section gallary end */
+/* section pokemon-footer */
+.pokemon-ball-footer {
+  overflow: hidden;
+  height: 15em;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.pokemon-ball-footer-image img {
+  height: 23em;
+  width: 24em;
+}
+/* section pokemon-footer end */
+/* .pause *{ 
+    animation-play-state:paused;
+} */
+/* pokemon details */
+.pokemon_details {
+  background-color: rgb(196, 227, 255);
+  width: 25em;
+  height: 7.3em;
+  position: absolute;
+  justify-content: center;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 5;
+  border: 2px solid rgb(255, 0, 0);
+}
+.pokemon_details ul li {
+  list-style: none;
+  height: 1.8em;
+  text-align: center;
+}
+.pokemon_details ul h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1em;
+}
+.pokemon_details div {
+  width: 85%;
+  height: 0.1em;
+  background-color: black;
+  position: relative;
+  box-shadow: 0px 1px 7px 0px;
+  display: inline-block;
+  margin-bottom: 9px;
+}
+
+.pokemon_details_trans {
+  transition: width 600ms;
+  background-color: rgb(33, 6, 235);
+  left: 50%;
+  top: 27.9%;
+  transform: translate(-50%, 0);
+  z-index: 5;
+  width: 25em;
+  height: 7.3em;
+  overflow: hidden;
+  position: absolute;
+}
+
+.pokemon_details_trans_js {
+  width: 0;
+  overflow: hidden;
+}
